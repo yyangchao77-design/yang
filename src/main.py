@@ -1,8 +1,5 @@
-import pygame
+
 from game import Game
 
-pygame.init()
-
-Game().run()
-
-pygame.quit()
+if __name__ == "__main__":
+    Game().run()

@@ -1,10 +1,8 @@
-from camera import Camera
-from world import World
 import pygame
 import settings
 from player import Player
-
-
+from world import World
+from camera import Camera
 class Game:
     def __init__(self):
         pygame.init()
@@ -20,17 +18,16 @@ class Game:
         self.player = Player()
         self.world = World()
         self.running = True
+def run(self):
+    while self.running:
+        self.clock.tick(settings.FPS)
 
-    def run(self):
-        while self.running:
-            self.clock.tick(settings.FPS)
+        self.handle_events()
+        self.update()
+        self.draw()
 
-            self.handle_events()
-            self.update()
-            self.draw()
-
-        pygame.quit()
-
+    pygame.quit()
+    
     def handle_events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:

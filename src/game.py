@@ -1,3 +1,4 @@
+from world import World
 import pygame
 import settings
 from player import Player
@@ -16,7 +17,7 @@ class Game:
         self.clock = pygame.time.Clock()
 
         self.player = Player()
-
+        self.world = World()
         self.running = True
 
     def run(self):
